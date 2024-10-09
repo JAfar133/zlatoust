@@ -1,0 +1,25 @@
+services:
+  webapp:
+    container_name: webapp
+    build: ../webapp
+    restart: always
+    environment:
+      - "env=${env}"
+      - "PG_USER=${PG_USER}"
+      - "PG_PASS=${PG_PASS}"
+      - "PG_HOST=${PG_HOST}"
+      - "PG_PORT=${PG_PORT}"
+      - "PG_NEW_USER_LOGIN=${PG_NEW_USER_LOGIN}"
+      - "PG_NEW_USER_PASSWORD=${PG_NEW_USER_PASSWORD}"
+      - "PG_DATABASE_NAME=${PG_DATABASE_NAME}"
+      - "JWT_SECRET=${JWT_SECRET}"
+      - "JWT_ISSUER=${JWT_ISSUER}"
+      - "LOGS_DIR=${LOGS_DIR}"
+      - "LOGS_MAX_HISTORY=${LOGS_MAX_HISTORY}"
+      - "PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}"
+      - "PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}"
+      - "ERRORS_MINUTES_PERIOD=${ERRORS_MINUTES_PERIOD}"
+      - "JWT_EXPIRATION=${JWT_EXPIRATION}"
+      - "JWT_REFRESH_TOKEN_EXPIRATION=${JWT_REFRESH_TOKEN_EXPIRATION}"
+    ports:
+      - "8082:8080"
