@@ -9,7 +9,7 @@ infrastructure/.env
 backend/out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-
+./logs
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
