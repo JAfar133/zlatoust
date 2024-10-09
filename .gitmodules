@@ -1,0 +1,6 @@
+[submodule "backend"]
+	path = backend
+	url = git@github.com:JAfar133/zlatoust-backend.git
+[submodule "frontend"]
+	path = frontend
+	url = git@github.com:JAfar133/zlatoust-frontend.git
